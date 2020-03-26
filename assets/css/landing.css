@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+header {
+    height: 5vh;
+    text-align: center;
+    padding: 25px 0;
+}
+
+#Weltkarte {
+    height: 88vh;
+    background: url('/assets/img/Weltkarte.png') center no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 10.7%;
+}
+
+#Flaggen {
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    color: white;
+    background: rgba(0, 0, 0, 0.329);
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+}
+
+img {
+    width: 35%;
+}
+
+#zweiteSeite {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: 2% 0;
+}
+
+#zweiteSeite article div {
+    display: flex;
+    margin-top: 10%;
+}
+
+#zweiteSeite article {
+    width: 50%;
+}
+
+#zweiteSeite img {
+    width: 35%;
+}
+
+footer {
+    text-align: center;
+}
+
+footer img {
+    width: 10%;
+    margin: 1% 0;
+}
+
+#zweiteSeite article p {
+    font-size: 2rem;
+    margin-left: 10%;
+    margin-top: 5%;
+}
