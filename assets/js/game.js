@@ -1,6 +1,6 @@
 
 // ----------------------------------------- USA -----------------------------------------
-if (window.location.pathname == "/gameUSA.html" || window.location.pathname == "/Project-Corona-Shoot/gameUSA.html") {
+if (window.location.pathname.slice(window.location.pathname.lastIndexOf("/")) == "/gameUSA.html") {
     console.log(window.location.pathname)
     GreenVirus()
     GreyVirus()
@@ -8,7 +8,7 @@ if (window.location.pathname == "/gameUSA.html" || window.location.pathname == "
 }
 // ----------------------------------------- USA -----------------------------------------
 // ----------------------------------------- Deutschland -----------------------------------------
-if (window.location.pathname == "/gameDE.html" || window.location.pathname == "/Project-Corona-Shoot/gameDE.html") {
+if (window.location.pathname.slice(window.location.pathname.lastIndexOf("/")) == "/gameDE.html") {
     GreenVirus()
     GreenVirus2()
     GreyVirus()
