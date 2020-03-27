@@ -1,154 +1,214 @@
-let t = 0;
-let txt = 'The world is near its end. The world is almost done. China has got it under control, Germany is still struggling but optimistic and USA is going to lose. Can you help the countries to overcome the apocalypse? Choose toiletpaper as your main weapon and fight!';
-let speed = 100;
-function typeWriter() {
-    if (t < txt.length) {
-        document.getElementById("delta1").innerHTML += txt.charAt(t);
-        t++;
-        setTimeout(typeWriter, speed);
-    }
+// ----------------------------------------- USA -----------------------------------------
+if (window.location.pathname == "/gameUSA.html") {
+    GreenVirus()
+    GreyVirus()
+    RedVirus()
 }
-typeWriter()
-
+// ----------------------------------------- USA -----------------------------------------
+// ----------------------------------------- Deutschland -----------------------------------------
+if (window.location.pathname == "/gameDE.html") {
+    GreenVirus()
+    GreenVirus2()
+    GreyVirus()
+}
+// ----------------------------------------- Deutschland -----------------------------------------
+// ----------------------------------------- China -----------------------------------------
+if (window.location.pathname == "/gameCH.html") {
+    GreenVirus()
+    GreenVirus2()
+}
+// ----------------------------------------- China -----------------------------------------
 // ----------------------------------------- Code für grünen Virus -----------------------------------------
-let i = 0;
-let TimeId1 = setInterval(() => {
-    if (shotsleft < 1) {
-        document.getElementById("flyingBird").style.display = "none";
-    } else {
-        let XAchse = Math.floor(Math.random() * 70);
-        document.getElementById("flyingBird").style.display = "block";
-        document.getElementById("flyingBird").style.position = "absolute";
-        document.getElementById("flyingBird").style.top = XAchse + "vh";
-        i++;
-
-        let horizontal = Math.floor(Math.random() * 90);
-        let TimeID2 = setInterval(() => {
-            document.getElementById("flyingBird").style.left = horizontal + "vw";
-            horizontal++;
-            if (horizontal == 90) {
-                document.getElementById("flyingBird").style.display = "none";
-                clearInterval(TimeID2)
-            }
-        }, 250)
-
-        if (i == 1000) {
+function GreenVirus() {
+    let i = 0;
+    let TimeId1 = setInterval(() => {
+        if (shotsleft < 1) {
             document.getElementById("flyingBird").style.display = "none";
-            clearInterval(TimeId1)
+        } else {
+            let XAchse = Math.floor(Math.random() * 70);
+            document.getElementById("flyingBird").style.display = "block";
+            document.getElementById("flyingBird").style.position = "absolute";
+            document.getElementById("flyingBird").style.top = XAchse + "vh";
+            i++;
+
+            let horizontal = Math.floor(Math.random() * 90);
+            let TimeID2 = setInterval(() => {
+                document.getElementById("flyingBird").style.left = horizontal + "vw";
+                horizontal++;
+                if (horizontal == 90) {
+                    document.getElementById("flyingBird").style.display = "none";
+                    clearInterval(TimeID2)
+                }
+            }, 250)
+
+            if (i == 1000) {
+                document.getElementById("flyingBird").style.display = "none";
+                clearInterval(TimeId1)
+            }
         }
-    }
-}, 1000)
+    }, 1000)
 
-document.getElementById("flyingBird").addEventListener("click", () => {
-    if (shotsleft > 0) {
-        PunktestandNeu = PunktestandNeu + 50;
-        shotsleft = shotsleft - 1;
-        document.getElementById("Ausgabe").innerHTML = PunktestandNeu;
-        document.getElementById("flyingBird").style.display = "none"
-        ToilettenpapierEinblenden(shotsleft)
-    } else {
-        document.getElementById("flyingBird").style.display = "none"
-        shotsleft = 0;
-        ToilettenpapierEinblenden(shotsleft)
-    }
-})
-
+    document.getElementById("flyingBird").addEventListener("click", () => {
+        if (shotsleft > 0) {
+            PunktestandNeu = PunktestandNeu + 50;
+            shotsleft = shotsleft - 1;
+            document.getElementById("Ausgabe").innerHTML = PunktestandNeu;
+            document.getElementById("flyingBird").style.display = "none"
+            ToilettenpapierEinblenden(shotsleft)
+        } else {
+            document.getElementById("flyingBird").style.display = "none"
+            shotsleft = 0;
+            ToilettenpapierEinblenden(shotsleft)
+        }
+    })
+}
 // ----------------------------------------- Code für grünen Virus -----------------------------------------
-// ----------------------------------------- Code für grauen Virus -----------------------------------------
+// ----------------------------------------- Code für grünen Virus 2 -----------------------------------------
+function GreenVirus2() {
+    let i = 0;
+    let TimeId1 = setInterval(() => {
+        if (shotsleft < 1) {
+            document.getElementById("flyingBirdV2green").style.display = "none";
+        } else {
+            let XAchse = Math.floor(Math.random() * 70);
+            document.getElementById("flyingBirdV2green").style.display = "block";
+            document.getElementById("flyingBirdV2green").style.position = "absolute";
+            document.getElementById("flyingBirdV2green").style.top = XAchse + "vh";
+            i++;
 
-let i2 = 0;
-document.getElementById("flyingBird2").style.display = "block"
+            let horizontal = Math.floor(Math.random() * 90);
+            let TimeID2 = setInterval(() => {
+                document.getElementById("flyingBirdV2green").style.left = horizontal + "vw";
+                horizontal++;
+                if (horizontal == 90) {
+                    document.getElementById("flyingBirdV2green").style.display = "none";
+                    clearInterval(TimeID2)
+                }
+            }, 250)
 
-let TimeId3 = setInterval(() => {
-    if (shotsleft < 1) {
-        document.getElementById("flyingBird2").style.display = "none";
-    } else {
-        let XAchse2 = Math.ceil(Math.random() * 70);
-        document.getElementById("flyingBird2").style.display = "block";
-        document.getElementById("flyingBird2").style.position = "absolute";
-        document.getElementById("flyingBird2").style.top = XAchse2 + "vh";
-        i2++;
-
-        let horizontal2 = Math.floor(Math.random() * 90);
-        let TimeID4 = setInterval(() => {
-            document.getElementById("flyingBird2").style.left = horizontal2 + "vw";
-            horizontal2++;
-            if (horizontal2 == 90) {
-                document.getElementById("flyingBird2").style.display = "none";
-                clearInterval(TimeID4)
+            if (i == 1000) {
+                document.getElementById("flyingBirdV2green").style.display = "none";
+                clearInterval(TimeId1)
             }
-        }, 250)
+        }
+    }, 1000)
 
-        if (i2 == 1000) {
+    document.getElementById("flyingBirdV2green").addEventListener("click", () => {
+        if (shotsleft > 0) {
+            PunktestandNeu = PunktestandNeu + 50;
+            shotsleft = shotsleft - 1;
+            document.getElementById("Ausgabe").innerHTML = PunktestandNeu;
+            document.getElementById("flyingBirdV2green").style.display = "none"
+            ToilettenpapierEinblenden(shotsleft)
+        } else {
+            document.getElementById("flyingBirdV2green").style.display = "none"
+            shotsleft = 0;
+            ToilettenpapierEinblenden(shotsleft)
+        }
+    })
+}
+// ----------------------------------------- Code für grünen Virus 2 -----------------------------------------
+// ----------------------------------------- Code für grauen Virus -----------------------------------------
+function GreyVirus() {
+    let i2 = 0;
+    document.getElementById("flyingBird2").style.display = "block"
+
+    let TimeId3 = setInterval(() => {
+        if (shotsleft < 1) {
             document.getElementById("flyingBird2").style.display = "none";
-            clearInterval(TimeId3)
+        } else {
+            let XAchse2 = Math.ceil(Math.random() * 70);
+            document.getElementById("flyingBird2").style.display = "block";
+            document.getElementById("flyingBird2").style.position = "absolute";
+            document.getElementById("flyingBird2").style.top = XAchse2 + "vh";
+            i2++;
+
+            let horizontal2 = Math.floor(Math.random() * 90);
+            let TimeID4 = setInterval(() => {
+                document.getElementById("flyingBird2").style.left = horizontal2 + "vw";
+                horizontal2++;
+                if (horizontal2 == 90) {
+                    document.getElementById("flyingBird2").style.display = "none";
+                    clearInterval(TimeID4)
+                }
+            }, 250)
+
+            if (i2 == 1000) {
+                document.getElementById("flyingBird2").style.display = "none";
+                clearInterval(TimeId3)
+            }
         }
-    }
-}, 1000)
+    }, 1000)
 
-document.getElementById("flyingBird2").addEventListener("click", () => {
-    if (shotsleft > 0) {
-        PunktestandNeu = PunktestandNeu + 100;
-        shotsleft = shotsleft - 1;
-        document.getElementById("Ausgabe").innerHTML = PunktestandNeu;
-        document.getElementById("flyingBird2").style.display = "none"
-        ToilettenpapierEinblenden(shotsleft)
-    } else {
-        document.getElementById("flyingBird2").style.display = "none"
-        shotsleft = 0;
-        ToilettenpapierEinblenden(shotsleft)
-    }
-})
-
+    document.getElementById("flyingBird2").addEventListener("click", () => {
+        if (shotsleft > 0) {
+            PunktestandNeu = PunktestandNeu + 100;
+            shotsleft = shotsleft - 1;
+            document.getElementById("Ausgabe").innerHTML = PunktestandNeu;
+            document.getElementById("flyingBird2").style.display = "none"
+            ToilettenpapierEinblenden(shotsleft)
+        } else {
+            document.getElementById("flyingBird2").style.display = "none"
+            shotsleft = 0;
+            ToilettenpapierEinblenden(shotsleft)
+        }
+    })
+}
 
 // ----------------------------------------- Code für grauen Virus -----------------------------------------
 
 // ----------------------------------------- Code für roten Virus -----------------------------------------
-let i3 = 0;
-document.getElementById("flyingBird3").style.display = "block"
+function RedVirus() {
 
-let TimeId5 = setInterval(() => {
-    if (shotsleft < 1) {
-        document.getElementById("flyingBird3").style.display = "none";
-    } else {
-        let XAchse3 = Math.round(Math.random() * 70);
-        document.getElementById("flyingBird3").style.display = "block";
-        document.getElementById("flyingBird3").style.position = "absolute";
-        document.getElementById("flyingBird3").style.top = XAchse3 + "vh";
-        i3++;
+    let i3 = 0;
+    document.getElementById("flyingBird3").style.display = "block"
 
-        let horizontal3 = Math.floor(Math.random() * 90);
-        let TimeID6 = setInterval(() => {
-            document.getElementById("flyingBird3").style.left = horizontal3 + "vw";
-            horizontal3++;
-            if (horizontal3 == 90) {
-                document.getElementById("flyingBird3").style.display = "none";
-                clearInterval(TimeID6)
-            }
-        }, 250)
-
-        if (i3 == 1000) {
+    let TimeId5 = setInterval(() => {
+        if (shotsleft < 1) {
             document.getElementById("flyingBird3").style.display = "none";
-            clearInterval(TimeId5)
+        } else {
+            let XAchse3 = Math.round(Math.random() * 70);
+            document.getElementById("flyingBird3").style.display = "block";
+            document.getElementById("flyingBird3").style.position = "absolute";
+            document.getElementById("flyingBird3").style.top = XAchse3 + "vh";
+            i3++;
+
+            let horizontal3 = Math.floor(Math.random() * 90);
+            let TimeID6 = setInterval(() => {
+                document.getElementById("flyingBird3").style.left = horizontal3 + "vw";
+                horizontal3++;
+                if (horizontal3 == 90) {
+                    document.getElementById("flyingBird3").style.display = "none";
+                    clearInterval(TimeID6)
+                }
+            }, 250)
+
+            if (i3 == 1000) {
+                document.getElementById("flyingBird3").style.display = "none";
+                clearInterval(TimeId5)
+            }
         }
-    }
-}, 1000)
+    }, 1000)
 
-document.getElementById("flyingBird3").addEventListener("click", () => {
-    if (shotsleft > 0) {
-        PunktestandNeu = PunktestandNeu + 500;
-        shotsleft = shotsleft - 1;
-        document.getElementById("Ausgabe").innerHTML = PunktestandNeu;
-        document.getElementById("flyingBird3").style.display = "none"
-        ToilettenpapierEinblenden(shotsleft)
-    } else {
-        document.getElementById("flyingBird3").style.display = "none"
-        shotsleft = 0;
-        ToilettenpapierEinblenden(shotsleft)
-    }
-})
-
+    document.getElementById("flyingBird3").addEventListener("click", () => {
+        if (shotsleft > 0) {
+            PunktestandNeu = PunktestandNeu + 500;
+            shotsleft = shotsleft - 1;
+            document.getElementById("Ausgabe").innerHTML = PunktestandNeu;
+            document.getElementById("flyingBird3").style.display = "none"
+            ToilettenpapierEinblenden(shotsleft)
+        } else {
+            document.getElementById("flyingBird3").style.display = "none"
+            shotsleft = 0;
+            ToilettenpapierEinblenden(shotsleft)
+        }
+    })
+}
 // ----------------------------------------- Code für roten Virus -----------------------------------------
+
+
+
+
 
 // ----------------------------------------- global -----------------------------------------
 let PunktestandNeu = 0;

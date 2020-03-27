@@ -61,27 +61,6 @@ header {
     width: 30%;
 }
 
-/* footer {
-    text-align: center;
-} */
-
-/* footer img {
-    width: 10%;
-    margin: 1% 0;
-}
-
-footer img:hover {
-    border: 2px solid yellow;
-} */
-
-/* #alpha2, #alpha3, #alpha4 {
-    width: 10%;
-} */
-
-/* img {
-    width: 27%;
-} */
-
 .spiel {
     height: 100vh;
     display: flex;
@@ -106,8 +85,17 @@ footer img:hover {
     margin: 5px;
 }
 
+.Flaggen article img:hover {
+    border: 2px solid yellow;
+}
+
 h3 {
     text-align: center;
     text-shadow: 2px 2px #000;
     font-size: 2rem;
+}
+
+#my_audio {
+    height: 50px;
+    display: none;
 }

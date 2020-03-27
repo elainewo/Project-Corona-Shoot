@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Corona Shoot Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/landing.css">
 
 </head>
 
 <body>
     <header>
-        <!-- <audio controls autoplay>
-            <source src="assets/Music/hintergrund_musik.mp3" type="audio/mpeg">
-        </audio> -->
+        <audio controls id="my_audio" src="assets/Music/hintergrund_musik.mp3" loop="loop"></audio>
+
         <h1 id="headline"> Will you survive? Shoot the Corona with the worlds most important substance! </h1>
     </header>
     <main>
@@ -49,15 +48,15 @@
             <h2>Choose your Level</h2>
             <div class="Flaggen">
                 <article>
-                    <img id="alpa2" src="assets/img/usa.png" alt="">
+                    <a href="gameUSA.html"><img id="alpa2" src="assets/img/usa.png" alt=""></a>
                     <h3>Hard</h3>
                 </article>
                 <article>
-                    <img id="alpa3" src="assets/img/de.jpeg" alt="">
+                    <a href="gameDE.html"><img id="alpa3" src="assets/img/de.jpeg" alt=""></a>
                     <h3>Medium</h3>
                 </article>
                 <article>
-                    <img id="alpa4" src=" assets/img/China.png" alt="">
+                    <a href="gameCH.html"><img id="alpa4" src="assets/img/China.png" alt=""></a>
                     <h3>Easy</h3>
                 </article>
             </div>
@@ -65,6 +64,7 @@
     </main>
 
     <script src="assets/js/game.js"></script>
+    <script src="assets/js/landing.js"></script>
 </body>
 
 </html>
