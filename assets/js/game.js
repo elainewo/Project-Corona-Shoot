@@ -1,19 +1,19 @@
 // ----------------------------------------- USA -----------------------------------------
-if (window.location.pathname == "/gameUSA.html") {
+if (window.location.pathname == "../gameUSA.html") {
     GreenVirus()
     GreyVirus()
     RedVirus()
 }
 // ----------------------------------------- USA -----------------------------------------
 // ----------------------------------------- Deutschland -----------------------------------------
-if (window.location.pathname == "/gameDE.html") {
+if (window.location.pathname == "../gameDE.html") {
     GreenVirus()
     GreenVirus2()
     GreyVirus()
 }
 // ----------------------------------------- Deutschland -----------------------------------------
 // ----------------------------------------- China -----------------------------------------
-if (window.location.pathname == "/gameCH.html") {
+if (window.location.pathname == "../gameCH.html") {
     GreenVirus()
     GreenVirus2()
 }
